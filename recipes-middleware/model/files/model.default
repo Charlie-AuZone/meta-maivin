@@ -1,15 +1,16 @@
-# This is the configuration file for the detect systemd service file.  When
+# This is the configuration file for the model systemd service file.  When
 # running systemctl start detect the service will use these configurations.
-# If running detect directly, you must continue to use the command-line options.
+# If running model directly, you must continue to use the command-line options.
 
-# A model is required for the detect application.
+# A model is required for the model application. This can be a segmentation model
+# or a detection model.
 MODEL = "/usr/share/detect/peopledetect.rtm"
 
 # An optional decoder model can be used for two-stage models.  Leave commented
 # out unless required, cannot be empty if defined.
 # DECODER_MODEL = ""
 
-# Enables publishing the visualization message
+# Enables publishing the visualization message for detection models
 VISUALIZATION = "true"
 
 # Annotation labels can display various information.  This controls the string
@@ -74,3 +75,6 @@ VIV_VX_ENABLE_CACHE_GRAPH_BINARY = "0"
 
 # Control the NPU graph cache storage location.
 VIV_VX_CACHE_BINARY_GRAPH_DIR = "/var/cache"
+
+# Enable compression for segmentation masks
+MASK_COMPRESSION = "false"

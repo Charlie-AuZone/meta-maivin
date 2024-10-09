@@ -1,5 +1,5 @@
 [Unit]
-Description=Maivin Segmentation Service
+Description=Maivin Model Service
 After=camera.service zenohd.service NetworkManager-wait-online.service
 Wants=camera.service zenohd.service NetworkManager-wait-online.service
 Before=recorder.service
@@ -7,8 +7,8 @@ Before=recorder.service
 [Service]
 Type=simple
 User=root
-ExecStart=/usr/bin/segment
-EnvironmentFile=/etc/default/segment
+ExecStart=/usr/bin/model
+EnvironmentFile=/etc/default/model
 Restart=always
 
 [Install]

@@ -6,7 +6,7 @@ STORAGE = "/home/torizon/recordings"
 
 # Controls the MCAP compression level.  Compression will impact the CPU usage
 # compared to no compression but can have significant benefits to MCAP size.
-# It is most impactful when recording the /radar/cube or /detect/mask topics.
+# It is most impactful when recording the /radar/cube or /model/mask topics.
 # Options are none, lz4, and zstd.  The lz4 is faster while zstd provides better
 # compression, none is the fastest but creates files up to 3x larger.
 COMPRESSION = "lz4"
@@ -14,4 +14,4 @@ COMPRESSION = "lz4"
 # Record the following topics.  If certain topics are unavailable the recording
 # will still be performed but the missing topics will be logged in a warning
 # message.  If none of the topics are available the recording will terminate.
-TOPICS = "/tf_static /imu /gps /camera/info /camera/h264 /detect/info /detect/boxes2d"
+TOPICS = "/tf_static /imu /gps /camera/info /camera/h264 /model/info /model/boxes2d /model/mask_compressed"
